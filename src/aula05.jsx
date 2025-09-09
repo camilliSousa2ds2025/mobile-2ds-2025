@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 class Aula05  extends Component {
   render() {
@@ -7,9 +7,14 @@ class Aula05  extends Component {
       <View style={styles.container}>
         <View style={ styles.caixa1 }>1</View>
         <View style={ styles.caixa2 }>
-          <Image />
+          <Image 
+          style={ styles.img1 }
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3Zn3yjeyCM1g3FjNXh7DMTRgiT6OGHjh5g&s' }}
+          />
         </View>
-        <View style={ styles.caixa3 }>3</View>
+        <View style={ styles.caixa3 }>
+         < Image/>
+        </View>
       </View>
     );
   }
@@ -47,6 +52,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     color: 'white',
     fontSize: 20
-}
+},
+
+img1: {
+  width: 50,
+  height: 50,
+},
+
 })
 
