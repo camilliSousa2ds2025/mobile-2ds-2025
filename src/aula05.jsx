@@ -11,6 +11,10 @@ class Aula05  extends Component {
           style={ styles.img1 }
           source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3Zn3yjeyCM1g3FjNXh7DMTRgiT6OGHjh5g&s' }}
           />
+          <Image 
+          source={ require('../img/teste.webp')}
+          style={ styles.img2 }
+          />
         </View>
         <View style={ styles.caixa3 }>
          < Image/>
@@ -57,6 +61,10 @@ const styles = StyleSheet.create({
 img1: {
   width: 50,
   height: 50,
+},
+img2: {
+  width: 100,
+  height: 100,
 },
 
 })
