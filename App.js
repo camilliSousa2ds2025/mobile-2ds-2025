@@ -10,7 +10,8 @@ export default function App() {
    //<Aula02 />
    //<Aula03 />
    //<Aula04 />
-   <Aula05 />
+   //<Aula05 />
+   <Aula06 />
   );
 }
 
