@@ -6,8 +6,10 @@ class Aula06 extends Component {
     super(props);
     this.state = {
       nome: '',
+      nome2: '',
     };
     this.pegaNome = this.pegaNome.bind(this);
+    this.pegaNome2 = this.pegaNome2.bind(this);
   }
 
   pegaNome(texto) {
@@ -18,18 +20,36 @@ class Aula06 extends Component {
     }
   }
 
+  pegaNome2(texto) {
+    if(texto.length > 0) {
+      this.setState ({nome2: "Bem vindo: " + texto})
+    }else{
+      this.setState({nome2: ''})
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        {/* Primeiro campo de texto */}
         <TextInput
-        style={styles.input}
-        placeholder='Digite seu nome:'
-        underlineColorAndroid="tranparent"
-        onChangeText={this.pegaNome}
+          style={styles.input}
+          placeholder='Digite seu nome:'
+          underlineColorAndroid="transparent"
+          onChangeText={this.pegaNome}
         />
 
+        <Text style={styles.texto}>{this.state.nome}</Text>
 
-         <Text style={styles.texto}>{this.state.nome}</Text>
+        {/* Segundo campo de texto */}
+        <TextInput
+          style={styles.input}
+          placeholder='Digite seu nome:'
+          underlineColorAndroid="transparent"
+          onChangeText={this.pegaNome2}
+        />
+
+        <Text style={styles.texto}>{this.state.nome2}</Text>
       </View>
     );
   }
@@ -45,18 +65,18 @@ const styles = StyleSheet.create({
   },
 
   input: { 
-  heigth: 45,
-  borderWidth: 1,
-  borderColor: '#222',
-  margin: 10,
-  fontSize: 20,
-  paddding: 10,
+    width: '80%',
+    height: 45,
+    borderWidth: 1,
+    borderColor: '#222',
+    margin: 10,
+    fontSize: 20,
+    padding: 10,
   },
 
   texto: {
-    textAling: 'center',
+    textAlign: 'center',
     fontSize: 25,
+    margin: 5,
   }
 });
-
-
